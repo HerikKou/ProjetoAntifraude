@@ -96,7 +96,7 @@ projetoantifraude/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/HerikKou/projetoantifraude
+git clone https://github.com/HerikKou/ProjetoAntifraude
 cd projetoantifraude
 
 # Suba todos os serviços
