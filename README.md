@@ -14,29 +14,7 @@ O projeto simula um fluxo real de processamento de pagamentos em ambiente financ
 
 O sistema é composto por **4 microsserviços independentes**, cada um com seu próprio banco de dados, comunicando-se de forma assíncrona via **Apache Kafka**.
 
-```
-Usuário Externo
-      │
-      ▼
-[TransacaoService] ──publica: transacao_criada──► [Kafka]
-                                                      │
-                                          consome: transacao_criada
-                                                      │
-                                                      ▼
-                                           [AntifraudeService IA]
-                                           - Calcula score de fraude
-                                           - scikit-learn (RandomForest)
-                                                      │
-                                    ┌─────────────────┴─────────────────┐
-                          publica: transacao_aprovada        publica: fraude_detectada
-                                    │
-                                    ▼
-                            [PagamentoService]
-                            - Confirma o pagamento
-                                    │
-                                    ▼
-                            (Confirma o Pagamento)
-```
+<img width="1289" height="733" alt="Captura de tela 2026-04-28 141539" src="https://github.com/user-attachments/assets/642c6c6b-2769-468e-890f-01d55d15a44f" />
 
 ### Containers Docker
 
