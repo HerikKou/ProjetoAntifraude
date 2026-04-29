@@ -1,0 +1,5 @@
+﻿sqlalchemy
+pymysql
+kafka-python
+pydantic
+python-dotenv
