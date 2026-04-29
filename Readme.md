@@ -24,6 +24,8 @@ O sistema foi desenvolvido com foco em:
 O sistema é composto por microsserviços independentes, cada um com seu próprio banco de dados, comunicando-se de forma assíncrona via Apache Kafka.
 
 Fluxo principal:
+<img width="1289" height="733" alt="Captura de tela 2026-04-28 141539" src="https://github.com/user-attachments/assets/ab9a7da6-9c4d-4dd8-a58e-7f3a2ff82e36" />
+
 
 Transação → Kafka → Antifraude → Kafka → Pagamento
 
@@ -104,18 +106,16 @@ O projeto possui testes unitários para validar as regras principais dos serviç
 pytest
 ```
 
-Exemplo de saída:
+ Saída esperada:
 
-```bash
-app/Testes/test_antifraude.py::test_validar_score PASSED
-app/Testes/test_antifraude.py::test_calcular_score PASSED
-```
+<img width="1441" height="60" alt="Teste transacao" src="https://github.com/user-attachments/assets/97350655-fed5-4fa2-b37f-3c4e6a039ea6" />
 
-Resultado esperado:
+---
+<img width="1459" height="84" alt="antifraude test" src="https://github.com/user-attachments/assets/fdac347e-7a05-4ae9-a4b7-df92816d05bd" />
 
-```bash
-==================== 100% PASSED ====================
-```
+---
+<img width="1467" height="34" alt="pagamento teste" src="https://github.com/user-attachments/assets/6867210b-792c-414e-a54d-77845ce2d5d8" />
+
 
 ---
 
